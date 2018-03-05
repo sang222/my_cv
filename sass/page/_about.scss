@@ -1,0 +1,213 @@
+.section-about.section-content {
+
+  /* education */
+  .container.center-block {
+    width: 90%;
+    position: relative;
+    height: 100%;
+
+
+
+    .row:last-child .align_content {
+      margin-bottom: 0;
+    }
+
+    .row:first-child .align_content {
+      margin-top: 20px;
+    }
+
+    .row {
+
+      .col-lg-6 {
+
+        &:hover {
+
+          h3 {
+            @include repeat;
+            animation-name: rubberBand;
+            color: rgba(73,155,234,1);
+          }
+
+          &:after {
+            background: #fff;
+            border: 2px solid rgba(73,155,234,1);
+          }
+
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          background-color: #000000;
+          width: 15px;
+          height: 15px;
+          border-radius: 100%;
+          border: 3px solid #ffffff;
+          top: 50%;
+          left: -7px;
+          margin-top: -16px;
+          -webkit-transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          -ms-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s;
+          z-index: 10;
+        }
+
+      }
+
+      .align_content {
+        @include flexbox();
+        @include align-items(center);
+        margin-bottom: 20px;
+
+        h3 {
+          @include FontRegular(32px, 1.4);
+          margin: 0 20px 0 0;
+          font-weight: bold;
+          cursor: pointer;
+          @include animate(.2s);
+        }
+
+        &--description {
+
+          h4 {
+              @include FontRegular(18px, 1.4);
+          }
+
+          p {
+            @include FontRegular(13px, 1.4);
+          }
+
+        }
+
+      }
+
+    }
+
+    .row:nth-child(even) {
+
+      .col-lg-6:after {
+        right: -7px;
+        left: auto;
+      }
+
+      .align_content {
+        @include flexbox();
+        width: 100%;
+        @include flex-flow(row-reverse);
+
+        &--description {
+          margin-right: 20px;
+
+          h4, p {
+            text-align: right;
+          }
+
+        }
+
+      }
+
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: #202020;
+      width: 2px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0px auto;
+      z-index: 9;
+      height: 100%;
+      display: block;
+    }
+
+  }
+
+  /* experience */
+  .experience {
+
+      .container {
+        width: 90%;
+
+        .col-md-6 {
+          padding: 30px 15px;
+          margin-bottom: 30px;
+          @include flexbox();
+          @include flex-flow(row);
+          @include align-items(center);
+          position: relative;
+          z-index: 9;
+
+          &:after {
+            content: '';
+            position: absolute;
+            right: 15px;
+            top: 0;
+            width: 70%;
+            height: 100%;
+            background: rgba(175, 175, 175, 0.2);
+            z-index: -1;
+            @include animate(.3s);
+          }
+
+          &:hover {
+            cursor: pointer;
+
+            &:after {
+              background: transparent;
+            }
+
+            h3 {
+              color: rgba(73,155,234,1);
+              @include repeat;
+              animation-name: pulse;
+            }
+
+          }
+
+        }
+
+      }
+
+      &__years {
+        width: 35%;
+
+        h3 {
+          @include FontRegular(55px, .9);
+          @include animate(.3s);
+        }
+
+        h5 {
+          @include FontRegular(13px, 1.2);
+        }
+
+      }
+
+      &__desc {
+        width: 60%;
+
+        h5 {
+          @include FontRegular(15px, 1.2);
+          font-weight: bold;
+          margin: 0;
+        }
+
+        span {
+          @include FontRegular(13px, 1.2);
+          margin-bottom: 10px;
+          display: block;
+        }
+
+        p {
+          @include FontRegular(12px, 1.2);
+        }
+
+      }
+
+  }
+
+}
