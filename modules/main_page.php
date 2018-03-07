@@ -18,6 +18,8 @@
       <?php
         include ('child/about.php');
         include ('child/contact.php');
+        include ('child/strength.php');
+        include ('child/portfolio.php');
       ?>
     </div>
   </div>

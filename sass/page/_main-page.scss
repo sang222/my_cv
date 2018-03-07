@@ -16,6 +16,10 @@
     left: -320px;
     color: #fff;
     text-align: center;
+    border-right: 5px solid #eee;
+    -webkit-box-shadow: -10px 0px 20px 0px rgba(0,0,0,0.04);
+    -moz-box-shadow: -10px 0px 20px 0px rgba(0,0,0,0.04);
+    box-shadow: -10px 0px 20px 0px rgba(0,0,0,0.04);
 
     .circle {
       width: 200px;
@@ -36,15 +40,23 @@
   }
 
   &__right {
-    border-left: 5px solid #eee;
-    -webkit-box-shadow: -10px 0px 20px 0px rgba(0,0,0,0.04);
-    -moz-box-shadow: -10px 0px 20px 0px rgba(0,0,0,0.04);
-    box-shadow: -10px 0px 20px 0px rgba(0,0,0,0.04);
     position: absolute;
     width: 75%;
     right: -100%;
     background: #fff;
-    height: auto;
+    height: 100%;
+    z-index: 9;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -5px;
+      z-index: 2;
+      height: 100%;
+      background: #eee;
+      width: 5px;
+    }
 
     &--nav {
       margin: 30px auto 50px;
@@ -95,10 +107,14 @@
     &--content {
       width: 90%;
       margin: auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 9;
 
       section {
         position: absolute;
-        top: 80px;
+        top: 0;
         left: 0;
         right: 0;
       }

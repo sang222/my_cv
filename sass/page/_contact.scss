@@ -1,0 +1,67 @@
+.section-contact.section-content {
+  display: none;
+
+  h2.title_sub {
+    @include FontRegular(22px, 1.2);
+    font-weight: bold;
+    border-bottom: 2px solid orange;
+    display: table;
+    margin-bottom: 20px;
+  }
+
+  p {
+    @include FontRegular(15px, 1.2);
+    margin-bottom: 30px;
+  }
+
+  .col-md-6 span {
+    @include FontRegular(14px, 1.2);
+    display: block;
+    margin-bottom: 10px;
+    @include flexbox;
+    @include align-items(center);
+
+    i {
+      margin-right: 15px;
+      font-size: 30px;
+    }
+
+  }
+
+  .col-md-6 {
+
+    .form-group {
+      position: relative;
+
+      i {
+        color: #ccc;
+        position: absolute;
+        right: 15px;
+        top: 11px;
+      }
+
+      .form-control {
+        @include borderCorner(0);
+        @include FontRegular(15px, 1.2);
+        padding: 10px 15px;
+        height: 40px;
+      }
+
+      textarea.form-control {
+        height: auto;
+      }
+
+    }
+
+    a {
+      @include borderCorner(0);
+      background: transparent;
+      @include FontRegular(15px, 1.2);
+      color: orange;
+      border: 2px solid orange;
+      padding: 10px 40px;
+    }
+
+  }
+
+}
