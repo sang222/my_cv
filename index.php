@@ -42,9 +42,16 @@
 		<script src="js/lib/SplitText.min.js"></script>
 		<script src="js/lib/TweenMax.min.js"></script>
 
+		<!-- Mixtup -->
+		<script src="js/lib/mixitup.min.js"></script>
+
+		<!-- Masonry -->
+		<script src="js/lib/masonry.pkgd.min.js"></script>
+
     <!-- Theme JavaScript -->
     <script src="js/app/class.SiteMain.js"></script>
 		<script src="js/app/home.js"></script>
 		<script src="js/app/page-content.js"></script>
+		<script src="js/app/cls.filter.js"></script>
 </body>
 </html>

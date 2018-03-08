@@ -5,6 +5,7 @@ var SiteMain = (function() {
 	function init(){
 		home.init();
 		page.init();
+		filter.init();
 	}
 
 	//FUNCTION

@@ -6,17 +6,78 @@
   <div class="container filter">
     <div class="row">
       <div class="col-md-12 text-center filter--nav">
-        <nav>
-          <span class="active">All</span>
-          <span>Website</span>
-          <span>Banner</span>
-          <span>Emailing</span>
+        <nav class="nav-filter">
+          <span class="mixitup-control-active" data-filter="all">All</span>
+          <span data-filter=".website">Website</span>
+          <span data-filter=".banner">Banner</span>
+          <span data-filter=".emailing">Emailing</span>
         </nav>
       </div>
     </div>
     <div class="row filter--content">
-      <div class="col-md-3 filter--content__item">
-        <span>test</span>
+      <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item website all">
+        <div class="item_content">
+          <img src="images/item.png" alt="">
+          <div class="item_content--box">
+            <h5>title</h5>
+            <p>Click to view detail</p>
+          </div>
+        </div>
+      </div>
+      <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item banner all">
+        <div class="item_content">
+
+        </div>
+      </div>
+      <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item emailing all">
+        <div class="item_content">
+
+        </div>
+      </div>
+      <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item website all">
+        <div class="item_content">
+
+        </div>
+      </div>
+      <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item all">
+        <div class="item_content">
+
+        </div>
+      </div>
+      <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item banner all">
+        <div class="item_content">
+
+        </div>
+      </div>
+      <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item emailing all">
+        <div class="item_content">
+
+        </div>
+      </div>
+      <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item all">
+        <div class="item_content">
+
+        </div>
+      </div>
+      <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item website all">
+        <div class="item_content">
+
+        </div>
+      </div>
+      <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item emailing all">
+        <div class="item_content">
+
+        </div>
+      </div>
+      <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item banner all">
+        <div class="item_content">
+
+        </div>
+      </div>
+      <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item all">
+        <div class="item_content">
+
+        </div>
       </div>
     </div>
   </div>
