@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/all.css">
 
 </head>
-<body class="fullscreen">
+<body class="fullscreen wrapper">
 
 	<?php
 		include('modules/main.php');

@@ -35,10 +35,28 @@ var page = (function() {
 
   function switch_page() {
 
-    $('.page-content__right--nav').on('click', 'a', function() {
+    $('.wrapper').on('click', '.switch-page', function() {
+      console.log($('.page-content__right--content section').attrs('page'))
       var id = $(this).attr('goto');
       window.location.hash = id
       //alert(location.hash)
+      var page = $('.wrapper .section-content').attr('page')
+      console.log(page, id);
+
+      if (window.location.hash == page) {
+        console.log(window.location.href)
+        $('section[page='+ page +']').show();
+      }
+
+      if (page == id) {
+        console.log($('section[page='+ page +']'));
+        $('body').addClass(page)
+        $('.section-content').hide();
+        $('section[page='+ page +']').show();
+      }
+      else {
+        $('.section-content').hide();
+      }
     })
   }
 

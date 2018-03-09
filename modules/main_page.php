@@ -9,10 +9,10 @@
   </div>
   <div class="page-content__right">
     <div class="page-content__right--nav">
-      <a class="active" goto="about">about</a>
-      <a goto="portfolio">portfolio</a>
-      <a goto="strength">strength</a>
-      <a goto="contact">contact</a>
+      <a class="active switch-page" goto="about">about</a>
+      <a goto="portfolio" class="switch-page">portfolio</a>
+      <a goto="strength" class="switch-page">strength</a>
+      <a goto="contact" class="switch-page">contact</a>
     </div>
     <div class="page-content__right--content">
       <?php

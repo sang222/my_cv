@@ -26,7 +26,11 @@
       </div>
       <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item banner all">
         <div class="item_content">
-
+          <img src="images/item.png" alt="">
+          <div class="item_content--box">
+            <h5>title</h5>
+            <p>Click to view detail</p>
+          </div>
         </div>
       </div>
       <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item emailing all">
