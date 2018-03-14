@@ -48,6 +48,9 @@
 		<!-- Masonry -->
 		<script src="js/lib/masonry.pkgd.min.js"></script>
 
+		<!-- Lodash -->
+		<script src="js/lib/lodash.core.js"></script>
+
     <!-- Theme JavaScript -->
     <script src="js/app/class.SiteMain.js"></script>
 		<script src="js/app/home.js"></script>

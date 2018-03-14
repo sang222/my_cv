@@ -7,12 +7,9 @@
     <div class="col-md-6">
       <h2 class="title_sub">Get in Touch</h2>
       <p>Sed eleifend sed nibh nec fringilla. Donec eu cursus sem, vitae tristique ante. Cras pretium rutrum egestas. Integer ultrices libero sed justo vehicula, eget tincidunt tortor tempus.</p>
-      <span class="address"><i class="fa fa-map-marker" aria-hidden="true"></i>
-Dĩ An, Bình Dương</span>
-      <span class="mail"><i class="fa fa-envelope-o" aria-hidden="true"></i>
-quangsang222@gmail.com</span>
-      <span class="phone"><i class="fa fa-phone" aria-hidden="true"></i>
-0967150928</span>
+      <span class="address"><i class="fa fa-map-marker" aria-hidden="true"></i> Dĩ An, Bình Dương</span>
+      <span class="mail"><i class="fa fa-envelope-o" aria-hidden="true"></i>quangsang222@gmail.com</span>
+      <span class="phone"><i class="fa fa-phone" aria-hidden="true"></i>0967150928</span>
     </div>
     <div class="col-md-6">
       <h2 class="title_sub">Contact Form</h2>

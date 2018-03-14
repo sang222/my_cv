@@ -29,4 +29,36 @@ body {
     }
   }
 
+  &.wrapper.active {
+
+    &-about {
+      .page-content__right--nav a[goto="about"]:after {
+        height: 2px;
+      }
+
+    }
+
+    &-contact {
+      .page-content__right--nav a[goto="contact"]:after {
+        height: 2px;
+      }
+
+    }
+
+    &-portfolio {
+      .page-content__right--nav a[goto="portfolio"]:after {
+        height: 2px;
+      }
+
+    }
+
+    &-resume {
+      .page-content__right--nav a[goto="resume"]:after {
+        height: 2px;
+      }
+
+    }
+
+  }
+
 }
