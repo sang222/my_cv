@@ -3,13 +3,13 @@ var page = (function() {
   setting = {
     tl: null,
     page: '',
-    id: ''
+    id: '',
+    tl2: null
   }
 
 	//INIT
 	function init(){
     animate_page();
-    //active_page();
     switch_page();
 	}
 
@@ -24,15 +24,6 @@ var page = (function() {
       setting.tl.to('.page-content__right', 0.8, {right: 0}, -0.05);
       setting.tl.set('.main-page',{opacity: 0, delay: 0.5})
     }})
-
-  }
-
-  function active_page() {
-    $('section[page="portfolio"]').on('click', function() {
-      setting.tl.play()
-      $('body').removeClass('fullscreen');
-
-    })
 
   }
 
@@ -55,21 +46,15 @@ var page = (function() {
       var check = (_.some(setting.page, function (el) {
         return _.includes(setting.id, el);
       }))
-
-
-      console.log(check);
-
-      /*if (window.location.hash == setting.page) {
-        console.log(window.location.href)
-        $('section[page='+ setting.page +']').show();
-      }*/
+      //console.log(check);
 
       if (check == true) {
         $('body').removeClass()
         $('body').addClass('active-'+setting.id+' wrapper')
         //console.log($('section[page='+ setting.id +']'));
-        $('.section-content').hide();
-        $('section[page='+ setting.id +']').show();
+        $('section.section-content').hide();
+        $('section[page='+ setting.id +']').show()
+
         setting.tl.play();
         if (setting.id == 'resume') {
           setTimeout(function(){ process_bar() }, 500);
@@ -79,11 +64,12 @@ var page = (function() {
     })
   }
 
-  function check_status() {
-      (_.some(setting.page, function (el) {
-        return _.includes(setting.id, el);
-      }))
-    }
+  function closepage_main() {
+    setting.tl2 = new TimelineMax({paused: false})
+    var w = parseInt('-1000px');
+    setting.tl2.to('section.section-content', .5, {scale: 0.5, opacity: 0})
+    //setting.tl2.set('section.section-content', {scale: 1, opacity: 0, right: w})
+  }
 
   function open_page(page) {
       $('.section-content').hide();
@@ -106,6 +92,7 @@ var page = (function() {
 	return {
 		init:init,
     open_page:open_page,
-    revert:revert
+    revert:revert,
+    closepage_main:closepage_main
 	}
 })();

@@ -11,16 +11,17 @@
     <div class="page-content__right--nav">
       <a class="active switch-page" goto="about">about</a>
       <a goto="portfolio" class="switch-page">portfolio</a>
-      <a goto="resume" class="switch-page">strength</a>
+      <a goto="resume" class="switch-page">resume</a>
       <a goto="contact" class="switch-page">contact</a>
     </div>
     <div class="page-content__right--content">
-      <?php
-        include ('child/about.php');
-        include ('child/contact.php');
-        include ('child/resume.php');
-        include ('child/portfolio.php');
-      ?>
+        <?php
+          include ('child/about.php');
+          include ('child/contact.php');
+          include ('child/resume.php');
+          include ('child/portfolio.php');
+        ?>
     </div>
+
   </div>
 </div>

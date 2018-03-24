@@ -51,6 +51,10 @@
 		<!-- Lodash -->
 		<script src="js/lib/lodash.core.js"></script>
 
+		<!-- mcustomscrollbar -->
+		<script src="js/lib/jquery.mCustomScrollbar.min.js"></script>
+		<script src="js/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+
     <!-- Theme JavaScript -->
     <script src="js/app/class.SiteMain.js"></script>
 		<script src="js/app/home.js"></script>
