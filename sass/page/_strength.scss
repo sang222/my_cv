@@ -58,7 +58,7 @@
         border: 1px solid #ccc;
         padding: 2px;
         margin: 0;
-        @include borderCorner(14px);
+        //@include borderCorner(14px);
       }
       .progress-bar-blue {
         height: 5px;
@@ -67,7 +67,7 @@
         text-align: right;
         background: #499bea;
         width: 0px;
-        @include borderCorner(20px);
+        //@include borderCorner(20px);
       }
 
     }

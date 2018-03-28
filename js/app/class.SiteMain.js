@@ -7,6 +7,7 @@ var SiteMain = (function() {
 		page.init();
 		filter.init();
 		scrollbar()
+		open_nav_mobile()
 	}
 
 	//FUNCTION
@@ -22,6 +23,12 @@ var SiteMain = (function() {
 			});
 			scroll.push(scrollbar);
 		});
+}
+
+function open_nav_mobile() {
+	$('.nav-mobile i').on('click', function() {
+		$('.nav-mobile .page-content__right--nav').toggleClass('active')
+	})
 }
 
 	//RETURN

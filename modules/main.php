@@ -2,8 +2,8 @@
   <nav class="nav-main">
       <a class="about switch-page" goto="about">about</a>
       <a class="portfolio switch-page" goto="portfolio">portfolio</a>
-      <a class="strength switch-page" goto="resume">resume</a>
-      <a class="contact switch-page" goto="contact">contact</a>
+      <a class="strength switch-page" goto="resume">Lý lịch</a>
+      <a class="contact switch-page" goto="contact">Liên hệ</a>
   </nav>
   <div class="main-page__content">
     <div class="circle">

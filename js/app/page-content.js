@@ -52,9 +52,15 @@ var page = (function() {
         $('body').removeClass()
         $('body').addClass('active-'+setting.id+' wrapper')
         //console.log($('section[page='+ setting.id +']'));
-        $('section.section-content').hide();
+        //$('section.section-content').hide();
         $('section[page='+ setting.id +']').show()
-
+        $('.page-content__right--nav .switch-page').on('click', function() {
+          $('.nav-mobile .page-content__right--nav').removeClass('active')
+          var attr = $(this).attr('goto');
+          setting.tl2 = new TimelineMax()
+          setting.tl2.to('section.section-content', 1, {scale: 0.8, opacity: 0, x: '200%', scale: 1, force3D: true })
+          setting.tl2.to('section[page='+ attr +']', .5, {'display': 'block',x: '0%',opacity: 1,force3D: true}, '-=0.7')
+        })
         setting.tl.play();
         if (setting.id == 'resume') {
           setTimeout(function(){ process_bar() }, 500);
@@ -65,10 +71,7 @@ var page = (function() {
   }
 
   function closepage_main() {
-    setting.tl2 = new TimelineMax({paused: false})
-    var w = parseInt('-1000px');
-    setting.tl2.to('section.section-content', .5, {scale: 0.5, opacity: 0})
-    //setting.tl2.set('section.section-content', {scale: 1, opacity: 0, right: w})
+
   }
 
   function open_page(page) {

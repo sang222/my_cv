@@ -1,0 +1,26 @@
+{
+	"portfolio": [
+    {
+      "title": "STK",
+      "image": "images/STK-logo.png",
+      "slider": [
+        {
+          "img1": "images/STK/img1.png",
+          "img1": "images/STK/img2.png",
+          "img1": "images/STK/img3.png",
+        }
+      ]
+    },
+    {
+      "title": "Quick",
+      "image": "images/Quick-logo.png",
+      "slider": [
+        {
+          "img1": "images/Quick/img1.png",
+          "img1": "images/Quick/img2.png",
+          "img1": "images/Quick/img3.png",
+        }
+      ]
+    },
+  ]
+}

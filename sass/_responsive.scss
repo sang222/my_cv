@@ -1,0 +1,74 @@
+@include breakpoint(mmd) {
+  .page-content__left {
+    display: none
+  }
+  .page-content__right {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+@include breakpoint(xs) {
+  .page-content__right--content, .nav-mobile {
+    width: 85%;
+    margin: auto;
+  }
+  .nav-mobile {
+    height: 40px;
+    margin: 15px auto;
+
+    .col-xs-6 {
+      padding: 0;
+
+      i {
+        font-size: 30px;
+        margin-top: 5px;
+        cursor: pointer;
+      }
+
+    }
+
+    .page-content__right--nav {
+      margin: 0;
+      width: 120%;
+      background: #000;
+      position: absolute;
+      padding: 0 7.5%;
+      z-index: 999;
+      left: 0;
+      top: 55px;
+      @include animate(.3s);
+      max-height: 0;
+      min-height: 0;
+      overflow: hidden;
+
+      &.active {
+        max-height: 100%;
+      }
+
+      a {
+        display: table;
+        margin: 15px 0;
+        color: #fff;
+
+        &:after {
+          width: 100%;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 490px) {
+  .section-portfolio.section-content .filter--content__item {
+    width: 100%;
+    padding: 0 15px;
+    float: none;
+    margin: 0 auto 20px;
+  }
+}

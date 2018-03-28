@@ -37,7 +37,7 @@
 
         .item_content {
           background: #000;
-          height: 200px;
+          //height: 200px;
           @include animate(.3s);
           overflow: hidden;
           cursor: pointer;
@@ -58,7 +58,9 @@
           }
 
           img {
-            width: 100%;
+            max-width: 100%;
+            display: table;
+            margin: auto;
             @include animate(.3s);
           }
 
