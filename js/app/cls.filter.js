@@ -1,4 +1,5 @@
-var filter = (function() {
+import mixitup from 'mixitup'
+SE.filter = (function() {
 	//PARAMATER
 
 	//INIT

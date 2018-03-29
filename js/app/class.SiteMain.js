@@ -1,11 +1,11 @@
-var SiteMain = (function() {
+SE.SiteMain = (function() {
 	//PARAMATER
 
 	//INIT
 	function init(){
-		home.init();
-		page.init();
-		filter.init();
+		SE.home.init();
+		SE.page.init();
+		SE.filter.init();
 		scrollbar()
 		open_nav_mobile()
 	}
@@ -38,5 +38,5 @@ function open_nav_mobile() {
 })();
 
 $(document).ready( function() {
-	SiteMain.init();
+	SE.SiteMain.init();
 });

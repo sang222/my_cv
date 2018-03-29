@@ -1,9 +1,9 @@
-var home = (function() {
+SE.home = (function() {
 	//PARAMATER
 
 	//INIT
 	function init(){
-    animate_name();
+    animate_avatar();
 	}
 
 	//FUNCTION
