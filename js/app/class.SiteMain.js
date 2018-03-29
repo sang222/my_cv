@@ -1,4 +1,4 @@
-var SiteMain = (function() {
+SE.SiteMain = (function() {
 	//PARAMATER
 	setting = {
 		swiper: null
@@ -6,9 +6,9 @@ var SiteMain = (function() {
 
 	//INIT
 	function init(){
-		home.init();
-		page.init();
-		filter.init();
+		SE.home.init();
+		SE.page.init();
+		SE.filter.init();
 		scrollbar()
 		open_nav_mobile()
 		open_popup()
@@ -75,5 +75,5 @@ function create_slider() {
 })();
 
 $(document).ready( function() {
-	SiteMain.init();
+	SE.SiteMain.init();
 });

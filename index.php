@@ -27,41 +27,7 @@
 		include('modules/main_page.php');
 	?>
 
-
-
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-		<!-- GreenSock -->
-		<script src="js/lib/SplitText.min.js"></script>
-		<script src="js/lib/TweenMax.min.js"></script>
-
-		<!-- Mixtup -->
-		<script src="js/lib/mixitup.min.js"></script>
-
-		<!-- Masonry -->
-		<script src="js/lib/masonry.pkgd.min.js"></script>
-
-		<!-- Lodash -->
-		<script src="js/lib/lodash.core.js"></script>
-
-		<!-- Swiper -->
-		<script src="js/lib/swiper.min.js"></script>
-
-		<!-- mcustomscrollbar -->
-		<script src="js/lib/jquery.mCustomScrollbar.min.js"></script>
-		<script src="js/lib/jquery.mCustomScrollbar.concat.min.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/app/class.SiteMain.js"></script>
-		<script src="js/app/home.js"></script>
-		<script src="js/app/page-content.js"></script>
-		<script src="js/app/cls.filter.js"></script>
+		<script type="text/javascript" src="js/commons.bundle.js"></script>
+		<script type="text/javascript" src="js/index.bundle.js"></script>
 </body>
 </html>

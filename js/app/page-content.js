@@ -1,4 +1,4 @@
-var page = (function() {
+SE.page = (function() {
 	//PARAMATER
   setting = {
     tl: null,
