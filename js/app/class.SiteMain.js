@@ -1,5 +1,8 @@
 var SiteMain = (function() {
 	//PARAMATER
+	setting = {
+		swiper: null
+	}
 
 	//INIT
 	function init(){
@@ -8,6 +11,7 @@ var SiteMain = (function() {
 		filter.init();
 		scrollbar()
 		open_nav_mobile()
+		open_popup()
 	}
 
 	//FUNCTION
@@ -31,9 +35,42 @@ function open_nav_mobile() {
 	})
 }
 
+function open_popup() {
+	$('.open_popup').on('click', function() {
+		$('body').addClass('popup-opening')
+		$('.filter-content__popup').show()
+		create_slider()
+	})
+}
+
+function close_popup() {
+	$('body').removeClass('popup-opening')
+	$('.filter-content__popup').hide()
+	destroy_slider()
+}
+
+function create_slider() {
+	setting.swiper = new Swiper('.swiper-container', {
+		effect: 'flip',
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+	}
+
+	function destroy_slider() {
+		if ( setting.swiper !== undefined ) setting.swiper.destroy( true, true );
+	}
+
 	//RETURN
 	return {
-		init:init
+		init:init,
+		close_popup:close_popup
 	}
 })();
 

@@ -24,7 +24,7 @@
             <i class="fa fa-comment" aria-hidden="true"></i>
             <textarea name="name" rows="8" class="form-control" placeholder="Tin nhắn"></textarea>
           </div>
-          <a href="#" class="btn btn-submit">Gửi</a>
+          <a href="#" class="btn">Gửi</a>
         </div>
       </div>
 </section>

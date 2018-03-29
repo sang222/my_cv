@@ -3,6 +3,7 @@
     {
       "title": "STK",
       "image": "images/STK-logo.png",
+			"filter": "website",
       "slider": [
         {
           "img1": "images/STK/img1.png",
@@ -14,6 +15,7 @@
     {
       "title": "Quick",
       "image": "images/Quick-logo.png",
+			"filter": "website",
       "slider": [
         {
           "img1": "images/Quick/img1.png",

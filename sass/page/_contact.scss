@@ -53,22 +53,6 @@
 
     }
 
-    .btn-submit {
-      @include borderCorner(0);
-      background: transparent;
-      @include FontRegular(15px, 1.2);
-      color: orange;
-      border: 2px solid orange;
-      padding: 10px 40px;
-      @include animate(.3s);
-
-      &:hover {
-        background: orange;
-        color: #fff;
-      }
-
-    }
-
   }
 
 }

@@ -17,73 +17,97 @@
       <div class="row filter--content">
         <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item website all">
           <div class="item_content">
-            <img src="images/item.png" alt="">
+            <img src="images/STK/logo-STK.svg" alt="">
             <div class="item_content--box">
-              <h5>title</h5>
-              <p>Click to view detail</p>
+              <h5>STK</h5>
+              <a class="open_popup">Click to view detail</a>
             </div>
-          </div>
-        </div>
-        <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item banner all">
-          <div class="item_content">
-            <img src="images/item.png" alt="">
-            <div class="item_content--box">
-              <h5>title</h5>
-              <p>Click to view detail</p>
-            </div>
-          </div>
-        </div>
-        <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item emailing all">
-          <div class="item_content">
-
           </div>
         </div>
         <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item website all">
           <div class="item_content">
-
-          </div>
-        </div>
-        <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item all banner">
-          <div class="item_content">
-
-          </div>
-        </div>
-        <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item banner all">
-          <div class="item_content">
-
-          </div>
-        </div>
-        <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item emailing all">
-          <div class="item_content">
-
-          </div>
-        </div>
-        <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item all banner">
-          <div class="item_content">
-
+            <img src="images/Quick/logo.svg" alt="">
+            <div class="item_content--box">
+              <h5>Quick</h5>
+              <a>Click to view detail</a>
+            </div>
           </div>
         </div>
         <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item website all">
           <div class="item_content">
-
+            <img src="images/VEB/logo.png" alt="">
+            <div class="item_content--box">
+              <h5>VEB</h5>
+              <a>Click to view detail</a>
+            </div>
           </div>
         </div>
-        <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item emailing all">
+        <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item website all">
           <div class="item_content">
-
+            <img src="images/Dascoin/logo.svg" alt="">
+            <div class="item_content--box">
+              <h5>Dascoin</h5>
+              <a>Click to view detail</a>
+            </div>
           </div>
         </div>
-        <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item banner all">
+        <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item website all">
           <div class="item_content">
-
+            <img src="images/Masan/logo.png" alt="">
+            <div class="item_content--box">
+              <h5>Lên báo thật máu</h5>
+              <a>Click to view detail</a>
+            </div>
           </div>
         </div>
-        <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item all banner">
+        <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item website all">
           <div class="item_content">
-
+            <img src="images/Homeyz/logo_H.png" alt="">
+            <div class="item_content--box">
+              <h5>Homeyz - Shares for shares</h5>
+              <a>Click to view detail</a>
+            </div>
           </div>
+        </div>
+        <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item website all">
+          <div class="item_content">
+            <img src="images/DVV/logo-color.svg" alt="">
+            <div class="item_content--box">
+              <h5>DVV</h5>
+              <a>Click to view detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item website all">
+          <div class="item_content">
+            <img src="images/ACC/logo.svg" alt="">
+            <div class="item_content--box">
+              <h5>ACC</h5>
+              <a>Click to view detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item website all">
+          <div class="item_content">
+            <img src="images/BOSCH/logo.svg" alt="">
+            <div class="item_content--box">
+              <h5>BOSCH</h5>
+              <a>Click to view detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item website all">
+          <div class="item_content">
+            <img src="images/pepsi/logo.png" alt="">
+            <div class="item_content--box">
+              <h5>PEPSI Lân</h5>
+              <a>Click to view detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <a href="#" class="btn">Load more</a>
         </div>
       </div>
     </div>
-
 </section>
