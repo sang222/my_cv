@@ -6,7 +6,7 @@
       <a class="contact switch-page" goto="contact">Liên hệ</a>
   </nav>
   <div class="main-page__content">
-    <div class="circle">
+    <div class="circle test">
       <img src="images/avatar.jpg" alt="" />
     </div>
     <div class="name">đặng<br/> quang sang</h1>
