@@ -40,7 +40,7 @@
 </div>
 
 <div class="filter-content__popup popup">
-  <img src="images/close.svg" class="close_popup" alt="" onclick="SiteMain.close_popup()">
+  <img src="images/close.svg" class="close_popup" alt="" onclick="SE.SiteMain.close_popup()">
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide">

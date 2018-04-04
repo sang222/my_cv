@@ -1,6 +1,7 @@
+import Swiper from 'swiper/dist/js/swiper.js'
 SE.SiteMain = (function() {
 	//PARAMATER
-	setting = {
+	var setting = {
 		swiper: null
 	}
 

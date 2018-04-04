@@ -5,7 +5,6 @@ SE.filter = (function() {
 	//INIT
 	function init(){
     main_animate();
-		//masonry();
 	}
 
 	//FUNCTION
@@ -44,22 +43,9 @@ SE.filter = (function() {
         });
   }
 
-	function masonry() {
-		var $container = $('.filter--content');
-		$container.masonry({
-			itemSelector: '.filter--content__item',
-			columnWidth: '.filter--content__item', //as you wish , you can use numeric
-      isAnimated: true,
-			layoutMode: 'packery',
-			packery: {
-				gutter: 5
-			}
-		})
-		$container.masonry('reloadItems');
-    $container.masonry('layout');
-	}
 	//RETURN
 	return {
-		init:init
+		init:init,
+		main_animate:main_animate
 	}
 })();

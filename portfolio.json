@@ -1,28 +1,26 @@
-{
-	"portfolio": [
-    {
-      "title": "STK",
-      "image": "images/STK-logo.png",
-			"filter": "website",
-      "slider": [
-        {
-          "img1": "images/STK/img1.png",
-          "img1": "images/STK/img2.png",
-          "img1": "images/STK/img3.png",
-        }
-      ]
-    },
-    {
-      "title": "Quick",
-      "image": "images/Quick-logo.png",
-			"filter": "website",
-      "slider": [
-        {
-          "img1": "images/Quick/img1.png",
-          "img1": "images/Quick/img2.png",
-          "img1": "images/Quick/img3.png",
-        }
-      ]
-    },
-  ]
-}
+[
+  {
+		"title": "STK",
+    "image": "images/STK/logo-STK.svg",
+		"classes": "website",
+		"slider": [
+      {
+        "img1": "images/STK/img1.png",
+        "img2": "images/STK/img2.png",
+        "img3": "images/STK/img3.png"
+      }
+  	]
+  },
+	{
+    "title": "Quick",
+    "image": "images/Quick/logo.svg",
+		"classes": "bannner",
+    "slider": [
+      {
+        "img1": "images/Quick/img1.png",
+        "img2": "images/Quick/img2.png",
+        "img3": "images/Quick/img3.png"
+      }
+    ]
+  }
+]
