@@ -9,7 +9,7 @@ SE.SiteMain = (function() {
 	function init(){
 		SE.home.init();
 		SE.page.init();
-		SE.filter.init();
+		//SE.filter.init();
 		scrollbar()
 		open_nav_mobile()
 		open_popup()

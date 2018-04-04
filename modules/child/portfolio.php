@@ -3,7 +3,7 @@
       <h2 class="title">portfolio</h2>
       <span>my best work</span>
     </div>
-    <div class="container filter">
+    <div class="container filter" ng-app="repeat-item">
       <div class="row">
         <div class="col-md-12 text-center filter--nav">
           <nav class="nav-filter">
@@ -14,21 +14,12 @@
           </nav>
         </div>
       </div>
-      <div class="row filter--content">
-        <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item all website">
+      <div class="row filter--content" ng-controller="repeat_all">
+        <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item all {{item.classes}}" ng-repeat="item in data">
           <div class="item_content">
-            <img alt="" src="images/STK/logo-STK.svg">
+            <img alt="" src={{item.image}}>
             <div class="item_content--box">
-              <h5>STK</h5>
-              <a class="open_popup">Click to view detail</a>
-            </div>
-          </div>
-        </div>
-        <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item all website">
-          <div class="item_content">
-            <img alt="" src="images/Quick/logo.svg">
-            <div class="item_content--box">
-              <h5>Quick</h5>
+              <h5>{{item.title}}</h5>
               <a class="open_popup">Click to view detail</a>
             </div>
           </div>
