@@ -14,7 +14,7 @@
           </nav>
         </div>
       </div>
-      <div class="row filter--content" ng-controller="repeat_all">
+      <div class="row filter--content" ng-controller="repeat_all" mix-it-up>
         <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item all {{item.classes}}" ng-repeat="item in data">
           <div class="item_content">
             <img alt="" src={{item.image}}>

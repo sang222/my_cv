@@ -32,6 +32,7 @@ SE.SiteMain = (function() {
 
 function open_nav_mobile() {
 	$('.nav-mobile i').on('click', function() {
+		console.log('aaaa')
 		$('.nav-mobile .page-content__right--nav').toggleClass('active')
 	})
 }
