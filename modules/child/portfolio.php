@@ -24,7 +24,7 @@
             </div>
           </div>
         </div>
-        <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item all website">
+        <div class="mix col-md-4 col-sm-4 col-xs-6 filter--content__item all banner">
           <div class="item_content">
             <img alt="" src="images/Quick/logo.svg">
             <div class="item_content--box">
