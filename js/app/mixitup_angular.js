@@ -31,12 +31,13 @@ repeat_json.controller('repeat_all', function($scope,$http) {
 
               scope.$on('init-mixitup', function(event) {
                   console.log('init');
-                  angular.element(element).mixItUp({
+                  var container = $('.filter--content');
+                  angular.element(element).mixitup(container,{
                       animation: {
                           duration: 200
                       },
                       load: {
-                          fill: '.filter--content .all'
+                          filter: '.filter--content .all'
                       }
                   });
               });

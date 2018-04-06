@@ -7,10 +7,10 @@
       <div class="row">
         <div class="col-md-12 text-center filter--nav">
           <nav class="nav-filter">
-            <span class="mixitup-control-active" data-filter="all">All</span>
-            <span data-filter=".website">Website</span>
-            <span data-filter=".banner">Banner</span>
-            <span data-filter=".emailing">Emailing</span>
+            <span class="mixitup-control-active control" data-filter="all">All</span>
+            <span class="control" data-filter=".website">Website</span>
+            <span class="control" data-filter=".banner">Banner</span>
+            <span class="control" data-filter=".emailing">Emailing</span>
           </nav>
         </div>
       </div>
