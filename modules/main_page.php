@@ -52,7 +52,7 @@
     </div>
     <div class="caption">
       <p>Project name: STK</p>
-      <p>Website: <a href="http://www.tourneeminerale.be/nl" target="_blank">tourneeminerale.be</a> </p>
+      <p>Website: <a href="http://www.tourneeminerale.be" target="_blank">tourneeminerale.be</a> </p>
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>

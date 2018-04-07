@@ -2,42 +2,31 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var mixitup = require('mixitup')
 
+import items_json from '../../portfolio.json'
+
+console.log(items_json.length)
+
 class Filter_btn extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       filter: '',
-      items: [
-        {
-          id: 1,
-          title: 'Papyrus',
-          type: 'ecommerce',
-        },
-        {
-          id: 2,
-          title: 'Clinton Foundation',
-          type: 'intranet'
-        },
-        {
-          id: 3,
-          title: 'Maddie',
-          type: 'ecommerce',
-        },
-        {
-          id: 4,
-          title: 'WCHN',
-          type: 'intranet',
-        },
-      ],
+      active: '',
+      limit_item: 6
     };
   }
 
+  LoadMore = () => {
+    this.setState({
+      limit_item: this.state.limit_item + 5
+    })
+  }
 
-  renderItems() {
-    let items = this.state.items;
+  renderItems() { //animate
+    let items = items_json;
     if (this.state.filter !== '') {
-      items = this.state.items.filter(item => {
-        return item.type === this.state.filter;
+      items = items_json.filter(item => {
+        return item.classes === this.state.filter;
       });
     }
     // mixer would really be part of the component (this.mixer)
@@ -48,52 +37,63 @@ class Filter_btn extends React.Component {
     this.setState({ filter }, this.renderItems);
   }
 
-  render() {
-      return(
-        <div className="row">
-        <div className="col-md-12 text-center filter--nav">
-          <nav className="nav-filter">
-          <button type="button" onClick={this.applyFilter.bind(this, '')}>Show all</button>
-          <button type="button" onClick={this.applyFilter.bind(this, 'ecommerce')}>Show ecommerce</button>
-          <button type="button" onClick={this.applyFilter.bind(this, 'intranet')}>Show intranets</button>
-          </nav>
-        </div>
-      </div>
-      );
+  isActive(active) {
+    return ((active === this.state.filter) ? 'active' : '');
   }
-}
 
-ReactDOM.render(<Filter_btn />, document.getElementById("filters_btn"))
-
-/*class Filter_item extends React.Component {
-  render() {
-    return (
-      <div className="row filter--content">
-        <div className="mix col-md-4 col-sm-4 col-xs-6 filter--content__item all website">
+  RenderItem() {
+    return items_json.slice(0,this.state.limit_item).map((item) => {
+      return(
+        <div className="mix col-md-4 col-sm-4 col-xs-6 filter--content__item" data-ref="item" key={item.title}>
           <div className="item_content">
-            <img alt="" src="images/STK/logo-STK.svg" />
+            <img alt="" src={item.image} />
             <div className="item_content--box">
-              <h5>STK</h5>
+              <h5>{item.title}</h5>
               <a className="open_popup">Click to view detail</a>
             </div>
           </div>
         </div>
-      </div>
-    )
+      )
+    })
   }
+
+  render() {
+      return(
+        <div className="portfolio_wrapper">
+          <div className="row">
+            <div className="col-md-12 text-center filter--nav">
+              <nav className="nav-filter">
+                <span type="button" className={this.isActive('')} onClick={this.applyFilter.bind(this, '')}>All</span>
+                <span type="button" className={this.isActive('website')} onClick={this.applyFilter.bind(this, 'website')}>Website</span>
+                <span type="button" className={this.isActive('banner')} onClick={this.applyFilter.bind(this, 'banner')}>Banner</span>
+                <span type="button" className={this.isActive('emailing')} onClick={this.applyFilter.bind(this, 'emailing')}>Emailing</span>
+              </nav>
+            </div>
+          </div>
+          <div className="row filter--content">
+            {this.RenderItem()}
+          </div>
+          {items_json.length > 5 ?
+            <div className="row row-loadmore">
+              <div className="col-xs-12 text-center">
+                  <a className="btn" onClick={this.LoadMore}>Load more</a>
+              </div>
+            </div>
+          : ''}
+
+        </div>
+      );
+    }
 }
 
-ReactDOM.render(<Filter_item />, document.getElementById("filters_item"))*/
+ReactDOM.render(<Filter_btn />, document.getElementById("portfolio_main"))
 
-const renderItem = item => {
-  return `<li data-ref="item">${item.title}</li>`;
-};
-
-const mixer = mixitup(document.getElementById('filters_item'), {
+const mixer = mixitup(document.getElementsByClassName('filter--content'), {
   data: { uidKey: 'id' },
-  render: { target: renderItem },
+  render: { target: '.filter--content' },
   selectors: {
     target: '[data-ref="item"]',
   }
 })
+
 window.mixer = mixer

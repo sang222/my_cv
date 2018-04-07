@@ -4,14 +4,8 @@
       <span>my best work</span>
     </div>
     <div class="container filter">
-      <div id="filters_btn"></div>
-      <div id="filters_item" className="row filter--content">
+      <div id="portfolio_main">
 
-      </div>
-      <div class="row row-loadmore">
-        <div class="col-xs-12 text-center">
-            <a href="#" class="btn">Load more</a>
-        </div>
       </div>
     </div>
 </section>
