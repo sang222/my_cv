@@ -47,7 +47,7 @@
           overflow: hidden;
           cursor: pointer;
           position: relative;
-          max-height: 200px;
+          height: 200px;
           z-index: 2;
 
           &:after {
@@ -69,7 +69,7 @@
             margin: auto;
             @include animate(.3s);
             max-height: 200px;
-            height: 200px;
+            @include objAbsoluteMiddle;
           }
 
           &:hover {
@@ -79,7 +79,7 @@
             }
 
             img {
-              transform: scale(1.8);
+              transform: scale(1.3) translate(-40%,-35%);
             }
 
             .item_content--box {
@@ -91,7 +91,7 @@
           &--box {
             width: 100%;
             height: 50%;
-            @include animate(.5s);
+            @include animate(.3s);
             z-index: 99;
             position: absolute;
             bottom: -200px;

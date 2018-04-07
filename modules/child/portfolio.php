@@ -4,8 +4,6 @@
       <span>my best work</span>
     </div>
     <div class="container filter">
-      <div id="portfolio_main">
-
-      </div>
+      <div id="portfolio_main"></div>
     </div>
 </section>

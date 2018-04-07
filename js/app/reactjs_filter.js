@@ -6,6 +6,7 @@ import items_json from '../../portfolio.json'
 
 console.log(items_json.length)
 
+
 class Filter_btn extends React.Component {
   constructor(props) {
     super(props);
@@ -18,7 +19,7 @@ class Filter_btn extends React.Component {
 
   LoadMore = () => {
     this.setState({
-      limit_item: this.state.limit_item + 5
+      limit_item: this.state.limit_item + 6
     })
   }
 
@@ -29,8 +30,10 @@ class Filter_btn extends React.Component {
         return item.classes === this.state.filter;
       });
     }
+    console.log(items)
+
     // mixer would really be part of the component (this.mixer)
-    window.mixer.dataset(items);
+    //window.mixer.dataset(items);
   }
 
   applyFilter(filter) {
@@ -73,27 +76,16 @@ class Filter_btn extends React.Component {
           <div className="row filter--content">
             {this.RenderItem()}
           </div>
-          {items_json.length > 5 ?
+          {items_json.length >= 6 && this.state.limit_item < 18 ?
             <div className="row row-loadmore">
               <div className="col-xs-12 text-center">
                   <a className="btn" onClick={this.LoadMore}>Load more</a>
               </div>
             </div>
           : ''}
-
         </div>
       );
     }
 }
 
 ReactDOM.render(<Filter_btn />, document.getElementById("portfolio_main"))
-
-const mixer = mixitup(document.getElementsByClassName('filter--content'), {
-  data: { uidKey: 'id' },
-  render: { target: '.filter--content' },
-  selectors: {
-    target: '[data-ref="item"]',
-  }
-})
-
-window.mixer = mixer
