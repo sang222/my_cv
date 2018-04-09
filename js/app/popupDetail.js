@@ -24,11 +24,6 @@ class PopupDetail extends Component {
       console.log(this.swiper)
   }
 
-  rebuild() {
-    //if (this.swiper) this.swiper.shouldSwiperUpdate(true)
-    console.log('aaaa')
-  }
-
   closePopup = () => {
     $('.close_popup').on('click', function() {
       $('body').removeClass('popup-opening')

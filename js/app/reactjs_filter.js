@@ -36,11 +36,11 @@ class Portfolio extends React.Component {
     }
 
     // mixer would really be part of the component (this.mixer)
-    console.log(items)
+    //console.log(items)
     this.setState({
       json_items: items
     })
-    console.log(this.state.json_items)
+    //console.log(this.state.json_items)
   }
 
   RenderItem() {
