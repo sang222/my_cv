@@ -1,20 +1,24 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+var React = require('react')
+var ReactDOM = require('react-dom')
 var mixitup = require('mixitup')
+import $ from 'jquery'
 
 import items_json from '../../portfolio.json'
+import PopupDetail from './popupDetail'
 
-console.log(items_json.length)
 
-
-class Filter_btn extends React.Component {
+class Portfolio extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       filter: '',
       active: '',
-      limit_item: 6
+      limit_item: 6,
+      json_items: ''
     };
+  }
+  componentDidUpdate() {
+    this.open_Popup()
   }
 
   LoadMore = () => {
@@ -23,17 +27,36 @@ class Filter_btn extends React.Component {
     })
   }
 
-  renderItems() { //animate
+  renderItems = () => { //animate
     let items = items_json;
     if (this.state.filter !== '') {
       items = items_json.filter(item => {
         return item.classes === this.state.filter;
       });
     }
-    console.log(items)
 
     // mixer would really be part of the component (this.mixer)
-    //window.mixer.dataset(items);
+    console.log(items)
+    this.setState({
+      json_items: items
+    })
+    console.log(this.state.json_items)
+  }
+
+  RenderItem() {
+    return items_json.slice(0,this.state.limit_item).map((item) => {
+      return(
+        <div className="mix col-md-4 col-sm-4 col-xs-6 filter--content__item" data-ref="item" key={item.id}>
+          <div className="item_content">
+            <img alt="" src={item.image} />
+            <div className="item_content--box">
+              <h5>{item.title}</h5>
+              <a className="open_popup" onClick={this.openPopup(item.id)} popup={item.id}>Click to view detail</a>
+            </div>
+          </div>
+        </div>
+      )
+    })
   }
 
   applyFilter(filter) {
@@ -44,20 +67,23 @@ class Filter_btn extends React.Component {
     return ((active === this.state.filter) ? 'active' : '');
   }
 
-  RenderItem() {
-    return items_json.slice(0,this.state.limit_item).map((item) => {
-      return(
-        <div className="mix col-md-4 col-sm-4 col-xs-6 filter--content__item" data-ref="item" key={item.title}>
-          <div className="item_content">
-            <img alt="" src={item.image} />
-            <div className="item_content--box">
-              <h5>{item.title}</h5>
-              <a className="open_popup">Click to view detail</a>
-            </div>
-          </div>
-        </div>
-      )
-    })
+  open_Popup() {
+    $('.open_popup').on('click', function() {
+  		$('body').addClass('popup-opening')
+  		$('.filter-content__popup').show()
+  	})
+  }
+
+  openPopup(itemID) {
+    return ()=>{
+      items_json.map((item) => {
+        console.log(itemID,item.id)
+        if(item.id == itemID) {
+            return ReactDOM.render(<PopupDetail sliderItem={item} />, document.getElementById("popup_content"));
+        }
+      })
+    }
+    this.open_Popup()
   }
 
   render() {
@@ -73,8 +99,8 @@ class Filter_btn extends React.Component {
               </nav>
             </div>
           </div>
-          <div className="row filter--content">
-            {this.RenderItem()}
+          <div className="row filter--content" id="portfolio_item">
+  						{this.RenderItem()}
           </div>
           {items_json.length >= 6 && this.state.limit_item < 18 ?
             <div className="row row-loadmore">
@@ -87,5 +113,4 @@ class Filter_btn extends React.Component {
       );
     }
 }
-
-ReactDOM.render(<Filter_btn />, document.getElementById("portfolio_main"))
+ReactDOM.render(<Portfolio />, document.getElementById("portfolio_main"));

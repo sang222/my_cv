@@ -12,6 +12,28 @@
     height: 35px;
     cursor: pointer;
     z-index: 99999;
+    width: 35px;
+  }
+
+  .caption {
+    position: absolute;
+    z-index: 9999;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    p,a {
+      color: #fff;
+      margin: 0;
+      @include animate(.3s);
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: #007aff;
+    }
+
   }
 
   .swiper-container {
@@ -28,27 +50,6 @@
         border: 2px solid #fff;
         border-radius: 3px;
         overflow: hidden;
-      }
-
-    }
-
-    .caption {
-      position: absolute;
-      z-index: 9999;
-      bottom: 10px;
-      left: 0;
-      width: 100%;
-      text-align: center;
-
-      p,a {
-        color: #fff;
-        margin: 0;
-        @include animate(.3s);
-      }
-
-      a:hover {
-        text-decoration: none;
-        color: #007aff;
       }
 
     }

@@ -4,10 +4,8 @@ import '../sass/all.scss'
 //Library
 import '../vendor/bootstrap/js/bootstrap.min.js'
 import '../js/lib/jquery.easing.min.js'
-import '../js/lib/SplitText.min.js'
 import '../js/lib/TweenMax.min.js'
-import '../js/lib/masonry.pkgd.min.js'
-import '../js/lib/lodash.core.js'
+var _ = require('lodash');
 import 'jquery-mousewheel'
 import '../js/lib/jquery.mCustomScrollbar.min.js'
 import '../js/lib/jquery.mCustomScrollbar.concat.min.js'

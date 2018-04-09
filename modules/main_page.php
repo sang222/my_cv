@@ -40,24 +40,5 @@
 </div>
 
 <div class="filter-content__popup popup">
-  <img src="images/close.svg" class="close_popup" alt="" onclick="SE.SiteMain.close_popup()">
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="images/STK/img1.png" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/STK/img2.png" alt="">
-      </div>
-    </div>
-    <div class="caption">
-      <p>Project name: STK</p>
-      <p>Website: <a href="http://www.tourneeminerale.be" target="_blank">tourneeminerale.be</a> </p>
-    </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-    <!-- Add Arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
+    <div id="popup_content" style="height: 100%"></div>
 </div>
