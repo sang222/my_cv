@@ -9,7 +9,6 @@ class PopupDetail extends Component {
       super(props)
       this.goNext = this.goNext.bind(this)
       this.goPrev = this.goPrev.bind(this)
-      this.rebuild = this.rebuild.bind(this)
       this.closePopup = this.closePopup.bind(this)
       this.swiper = null
   }
@@ -29,12 +28,12 @@ class PopupDetail extends Component {
       $('body').removeClass('popup-opening')
     	$('.filter-content__popup').hide()
     })
-    //this.rebuild()
   }
 
   render() {
     const params = {
       rebuildOnUpdate : true,
+      loop: true,
       effect: 'flip',
         pagination: {
           el: '.swiper-pagination',

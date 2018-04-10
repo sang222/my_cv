@@ -46,10 +46,12 @@
       @include align-items(center);
 
       img {
-        height: 80vh;
+        max-height: 80vh;
         border: 2px solid #fff;
         border-radius: 3px;
         overflow: hidden;
+        max-width: 80vw;
+        height: auto;
       }
 
     }
