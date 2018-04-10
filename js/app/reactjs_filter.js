@@ -13,13 +13,15 @@ class Portfolio extends React.Component {
     this.state = {
       filter: '',
       active: '',
+      json: items_json,
       limit_item: 6,
-      json_items: ''
     };
   }
   componentDidUpdate() {
     this.open_Popup()
   }
+
+
 
   LoadMore = () => {
     this.setState({
@@ -36,15 +38,15 @@ class Portfolio extends React.Component {
     }
 
     // mixer would really be part of the component (this.mixer)
-    //console.log(items)
-    this.setState({
-      json_items: items
+    //console.log(this.state.json)
+    this.state.json = items.filter(function(item) {
+      return item !== items
     })
-    //console.log(this.state.json_items)
+    //console.log(this.state.json,items)
   }
 
   RenderItem() {
-    return items_json.slice(0,this.state.limit_item).map((item) => {
+    return this.state.json.slice(0,this.state.limit_item).map((item) => {
       return(
         <div className="mix col-md-4 col-sm-4 col-xs-6 filter--content__item" data-ref="item" key={item.id}>
           <div className="item_content">
@@ -76,8 +78,8 @@ class Portfolio extends React.Component {
 
   openPopup(itemID) {
     return ()=>{
-      items_json.map((item) => {
-        console.log(itemID,item.id)
+      this.state.json.map((item) => {
+        //console.log(itemID,item.id)
         if(item.id == itemID) {
             return ReactDOM.render(<PopupDetail sliderItem={item} />, document.getElementById("popup_content"));
         }
@@ -102,7 +104,7 @@ class Portfolio extends React.Component {
           <div className="row filter--content" id="portfolio_item">
   						{this.RenderItem()}
           </div>
-          {items_json.length >= 6 && this.state.limit_item < 18 ?
+          {this.state.json.length >= 6 && this.state.limit_item < 18 ?
             <div className="row row-loadmore">
               <div className="col-xs-12 text-center">
                   <a className="btn" onClick={this.LoadMore}>Load more</a>
@@ -113,4 +115,5 @@ class Portfolio extends React.Component {
       );
     }
 }
+
 ReactDOM.render(<Portfolio />, document.getElementById("portfolio_main"));
