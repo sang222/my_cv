@@ -14,13 +14,12 @@ import '../js/app/reactjs_filter.js'
 
 //Custom js
 require('../js/app/class.SiteMain')
-//require('../js/app/cls.filter')
 require('../js/app/home')
 require('../js/app/page-content')
-//require('../js/app/angular_main')
+require('../js/app/submitForm')
 
 SE.SiteMain.init()
-//SE.filter.init()
+SE.form.init()
 SE.home.init()
 SE.page.init()
 

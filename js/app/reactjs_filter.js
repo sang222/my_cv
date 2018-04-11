@@ -1,7 +1,5 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
-var mixitup = require('mixitup')
-import $ from 'jquery'
 
 import items_json from '../../portfolio.json'
 import PopupDetail from './popupDetail'

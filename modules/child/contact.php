@@ -12,19 +12,21 @@
         </div>
         <div class="col-md-6">
           <h2 class="title_sub">Liên hệ</h2>
-          <div class="form-group">
-            <i class="fa fa-user" aria-hidden="true"></i>
-            <input type="text" class="form-control" placeholder="Họ tên...">
-          </div>
-          <div class="form-group">
-            <i class="fa fa-envelope-o" aria-hidden="true"></i>
-            <input type="text" class="form-control" placeholder="Địa chỉ Email">
-          </div>
-          <div class="form-group">
-            <i class="fa fa-comment" aria-hidden="true"></i>
-            <textarea name="name" rows="8" class="form-control" placeholder="Tin nhắn"></textarea>
-          </div>
-          <a href="#" class="btn">Gửi</a>
+          <form id="form" method="post">
+            <div class="form-group">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <input type="text" class="form-control" name="name" placeholder="Họ tên..." required>
+            </div>
+            <div class="form-group">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              <input type="text" class="form-control" name="email" placeholder="Địa chỉ Email" required>
+            </div>
+            <div class="form-group">
+              <i class="fa fa-comment" aria-hidden="true"></i>
+              <textarea name="name" rows="8" class="form-control" name="message" placeholder="Tin nhắn"></textarea>
+            </div>
+            <a class="btn" id="submit">Gửi</a>
+          </form>
         </div>
       </div>
 </section>

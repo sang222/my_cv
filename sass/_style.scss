@@ -12,6 +12,7 @@ body {
     border: 2px solid orange;
     padding: 10px 40px;
     @include animate(.3s);
+    cursor: pointer;
 
     &:hover {
       background: orange;
