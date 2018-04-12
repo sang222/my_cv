@@ -10,7 +10,7 @@ import 'jquery-mousewheel'
 import '../js/lib/jquery.mCustomScrollbar.min.js'
 import '../js/lib/jquery.mCustomScrollbar.concat.min.js'
 import '../js/app/reactjs_filter.js'
-
+import validate from 'jquery-validation'
 
 //Custom js
 require('../js/app/class.SiteMain')

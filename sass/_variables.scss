@@ -8,7 +8,7 @@ COLOR=====================*/
 /*===================
 FONTS=====================*/
 @mixin FontRegular ( $value, $line:1.1 ) {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Fira Sans', sans-serif;
 	font-size: $value;
 	line-height: $line;
 	font-weight: normal;

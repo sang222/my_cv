@@ -12,21 +12,24 @@
         </div>
         <div class="col-md-6">
           <h2 class="title_sub">Liên hệ</h2>
-          <form id="form" method="post">
+          <form id="form" method="POST" action="./mailer.php">
             <div class="form-group">
               <i class="fa fa-user" aria-hidden="true"></i>
               <input type="text" class="form-control" name="name" placeholder="Họ tên..." required>
             </div>
             <div class="form-group">
               <i class="fa fa-envelope-o" aria-hidden="true"></i>
-              <input type="text" class="form-control" name="email" placeholder="Địa chỉ Email" required>
+              <input type="email" class="form-control" name="email" placeholder="Địa chỉ Email" required>
             </div>
             <div class="form-group">
               <i class="fa fa-comment" aria-hidden="true"></i>
-              <textarea name="name" rows="8" class="form-control" name="message" placeholder="Tin nhắn"></textarea>
+              <textarea name="message" rows="8" class="form-control" placeholder="Tin nhắn" required></textarea>
             </div>
-            <a class="btn" id="submit">Gửi</a>
+            <a class="btn" type="submit" id="submit">Gửi</a>
           </form>
+          <?php
+          var_dump($_POST);
+          ?>
         </div>
       </div>
 </section>

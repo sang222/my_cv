@@ -1,0 +1,158 @@
+<?php
+/**
+ * PHPMailer simple contact form example.
+ * If you want to accept and send uploads in your form, look at the send_file_upload example.
+ */
+//Import the PHPMailer class into the global namespace
+use PHPMailer\PHPMailer\PHPMailer;
+require 'vendor/autoload.php';
+
+if (array_key_exists('to', $_POST)) {
+    $err = false;
+    $msg = '';
+    $email = '';
+    //Apply some basic validation and filtering to the subject
+    if (array_key_exists('subject', $_POST)) {
+        $subject = substr(strip_tags($_POST['subject']), 0, 255);
+    } else {
+        $subject = 'No subject given';
+    }
+    //Apply some basic validation and filtering to the query
+    if (array_key_exists('query', $_POST)) {
+        //Limit length and strip HTML tags
+        $query = substr(strip_tags($_POST['query']), 0, 16384);
+    } else {
+        $query = '';
+        $msg = 'No query provided!';
+        $err = true;
+    }
+    //Apply some basic validation and filtering to the name
+    if (array_key_exists('name', $_POST)) {
+        //Limit length and strip HTML tags
+        $name = substr(strip_tags($_POST['name']), 0, 255);
+    } else {
+        $name = '';
+    }
+    //Validate to address
+    //Never allow arbitrary input for the 'to' address as it will turn your form into a spam gateway!
+    //Substitute appropriate addresses from your own domain, or simply use a single, fixed address
+    if (array_key_exists('to', $_POST) and in_array($_POST['to'], ['tester','tester','tester'])) {
+        $to = $_POST['to'].'@emailaddress.com';
+    } else {
+        $to = 'myemail@emailaddress.com';
+    }
+    //Make sure the address they provided is valid before trying to use it
+    if (array_key_exists('email', $_POST) and PHPMailer::validateAddress($_POST['email'])) {
+        $email = $_POST['email'];
+    } else {
+        $msg .= "Error: invalid email address provided";
+        $err = true;
+    }
+    if (!$err) {
+        $mail->isSMTP();                                      // Set mailer to use SMTP
+        $mail->Host = 'send.one.com';                         // Specify main and backup SMTP servers
+        $mail->SMTPAuth = true;                               // Enable SMTP authentication
+        $mail->Username = 'myemail@emailaddress.com';            // SMTP username (enter the email adress to send to)
+        $mail->Password = 'xxxxxxxx';                       // SMTP password (enter the password for the email adress)
+        $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+        $mail->Port = 587;
+        $mail->CharSet = 'utf-8';
+        //It's important not to use the submitter's address as the from address as it's forgery,
+        //which will cause your messages to fail SPF checks.
+        //Use an address in your own domain as the from address, put the submitter's address in a reply-to
+        $mail->setFrom('myemail@emailaddress.com', (empty($name)? 'Contact form': $name));
+        $mail->addAddress($to);
+        $mail->addReplyTo($email, $name);
+        $mail->Subject = 'Contact form: ' . $subject;
+        $mail->Body = "Contact form submission\n\n" . $query;
+        if (!$mail->send()) {
+            $msg .= "Mailer Error: " . $mail->ErrorInfo;
+        } else {
+            $msg .= "Message sent!";
+        }
+    }
+}?>
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <!-- FontAwesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- My CSS File -->
+    <link type="text/css" href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <form class="container contact-wrap" method="post" action="">
+            <h2>Ønsker du hjælp, så kontakt mig her</h2>
+            <br>
+            <?php if (empty($msg)) { ?>
+            <div class="form-group">
+                <label for="name">Navn</label>
+                <input name="name" type="text" class="form-control" id="name" aria-describedby="nameHelp" required>
+                <small id="nameHelp" class="form-text text-muted">Angiv gerne dit fulde navn. Det gør det lettere for mig at komme i kontakt med vedkommende</small>
+            </div>
+            <div class="form-group">
+                <label for="to">Email</label>
+                <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                <small id="emailHelp" class="form-text text-muted">Din email vil aldrig blive videregivet</small>
+            </div>
+            <div class="form-group">
+                <label for="number">Tlf. nr.</label>
+                <input name="number" type="number" class="form-control" id="number" min="1" max="8" required>
+                <small id="numberHelp" class="form-text text-muted">Dit telefon nummer vil aldrig blive videregivet</small>
+            </div>
+            <div class="form-group">
+                <select name="to" id="to">
+                <option value="tester">test1</option>
+                <option value="tester" selected="selected">test2</option>
+                <option value="tester">test3</option>
+                </select><br>
+            </div>
+            <div class="form-group">
+                <label for="subject">Emne</label>
+                <input name="subject" type="text" class="form-control" id="subject" required>
+                <small id="subjectHelp" class="form-text text-muted">Beskriv kort, hvad din henvendelse drejer sig om</small>
+            </div>
+            <div class="form-group">
+                <label for="query">Besked</label>
+                <textarea name="query" class="form-control" id="query" rows="10" required></textarea>
+                <small id="queryHelp" class="form-text text-muted">Jeg vil besvare din besked så hurtigt som muligt</small>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <label class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" required>
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Bekræft alle felter er udfyldt</span>
+                            </label>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <button id="submit" type="submit" name="submit" class="btn btn-primary">Send besked</button>
+        </form>
+<?php } else {
+    echo $msg;
+}?>
+    </main>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+
+</html>
