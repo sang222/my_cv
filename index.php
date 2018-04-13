@@ -21,7 +21,6 @@
 
 </head>
 <body class="fullscreen wrapper">
-
 		<?php
 			include('modules/main.php');
 			include('modules/main_page.php');

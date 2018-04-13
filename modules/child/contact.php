@@ -12,24 +12,30 @@
         </div>
         <div class="col-md-6">
           <h2 class="title_sub">Liên hệ</h2>
-          <form id="form" method="POST" action="./mailer.php">
+          <form id="form" method="POST" action="mailer.php">
             <div class="form-group">
               <i class="fa fa-user" aria-hidden="true"></i>
-              <input type="text" class="form-control" name="name" placeholder="Họ tên..." required>
+              <input type="text" class="form-control" name="name" value="aaa" placeholder="Họ tên..."/>
             </div>
             <div class="form-group">
               <i class="fa fa-envelope-o" aria-hidden="true"></i>
-              <input type="email" class="form-control" name="email" placeholder="Địa chỉ Email" required>
+              <input type="email" class="form-control" name="email" placeholder="Địa chỉ Email" />
             </div>
             <div class="form-group">
               <i class="fa fa-comment" aria-hidden="true"></i>
-              <textarea name="message" rows="8" class="form-control" placeholder="Tin nhắn" required></textarea>
+              <textarea name="message" rows="8" class="form-control" placeholder="Tin nhắn"></textarea>
             </div>
-            <a class="btn" type="submit" id="submit">Gửi</a>
+            <a class="btn" type="submit" id="submit" />Gửi</a>
           </form>
+          <script type="text/javascript">
+
+          </script>
           <?php
-          var_dump($_POST);
-          ?>
+        			var_dump($_POST);
+        			echo("First name: " . $_POST['name'] . "<br />\n");
+        			echo("Last name: " . $_POST['email'] . "<br />\n");
+        			echo("tin nhắn: " . $_POST['message'] . "<br />\n");
+        	?>
         </div>
       </div>
 </section>

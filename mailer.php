@@ -61,10 +61,7 @@ $mail->Subject = 'PHPMailer GMail SMTP test';
 //$mail->msgHTML(file_get_contents('contents.html'), __DIR__);
 
 //Replace the plain text body with one created manually
-$first_name = $_POST['name'];
-$last_name = $_POST['email'];
-$license_type = $_POST['message'];
-$mail->Body = "<html><h2><b>$first_name $last_name, $license_type</b></h2></html>";
+$mail->Body = $_POST['name'].'<br/>'.$_POST['email'].'<br/>'.$_POST['message'];
 
 //Attach an image file
 //$mail->addAttachment('images/phpmailer_mini.png');

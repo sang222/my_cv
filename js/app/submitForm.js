@@ -15,7 +15,7 @@ SE.form = (function() {
 				form.submit()
 			}
 			else {
-				alert('error')
+				//alert('error')
 			}
 		})
 	}
