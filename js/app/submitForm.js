@@ -4,7 +4,7 @@ SE.form = (function() {
 
 	//INIT
 	function init(){
-		var id = $('#form')
+		var id = $('#contact-form')
 		submitForm(id)
 		submitClick(id)
 	}
@@ -13,6 +13,9 @@ SE.form = (function() {
 		$('#submit').on('click', function() {
 			if(form.valid() == true) {
 				form.submit()
+				$('#myModal').one('shown.bs.modal', function (e) {
+		        $('input,textarea').val("");
+		    }).modal('show');
 			}
 			else {
 				//alert('error')
@@ -37,21 +40,21 @@ SE.form = (function() {
 			// Make sure the form is submitted to the destination defined
 	    // in the "action" attribute of the form when valid
 	    submitHandler: function(form) {
-				console.log('aaaa')
-				$.ajax({
-					url: './mailer.php',
-					type: 'POST',
-					data: new FormData($(form)),
-          cache: false,
-          processData: false,
-					success: function(data) {
-						console.log(data)
-					}
-				})
-			}
+
+					$.ajax({
+						url: 'mailer.php',
+						type: 'POST',
+						data: $('#contact-form').serialize(),
+	          cache: false,
+	          processData: false,
+						success: function(data) {
+							console.log(data)
+						}
+					})
+				}
 		})
 		$('#submit').on('click', function() {
-				console.log("Valid: " + $('#form').valid())
+				console.log("Valid: " + $('#contact-form').valid())
 				$(id).validate().element('input[type="text"]')
 				$(id).validate().element('input[type="email"]')
 				$(id).validate().element('textarea')

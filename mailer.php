@@ -45,23 +45,25 @@ $mail->Username = "quangsang222@gmail.com";
 $mail->Password = "bcfwoolpqxznwaaa";
 
 //Set who the message is to be sent from
-$mail->setFrom('quangsang222@gmail.com', 'First Last');
+$mail->setFrom('quangsang222@gmail.com', 'Admin');
 
 //Set an alternative reply-to address
-$mail->addReplyTo('quangsang222@gmail.com', 'First Last');
+$mail->addReplyTo('quangsang222@gmail.com', 'Admin');
 
 //Set who the message is to be sent to
-$mail->addAddress('quangsang222@gmail.com', 'John Doe');
+$mail->addAddress('quangsang222@gmail.com', 'Admin');
 
 //Set the subject line
-$mail->Subject = 'PHPMailer GMail SMTP test';
+$mail->Subject = 'From to: MyCv';
 
 //Read an HTML message body from an external file, convert referenced images to embedded,
 //convert HTML into a basic plain-text alternative body
 //$mail->msgHTML(file_get_contents('contents.html'), __DIR__);
 
 //Replace the plain text body with one created manually
-$mail->Body = $_POST['name'].'<br/>'.$_POST['email'].'<br/>'.$_POST['message'];
+$mail->Body = 'Tên:'.$_POST['name'].
+              '____, Email:'.$_POST['email'].
+              '_____, Tin nhắn: '.$_POST['message'];
 
 //Attach an image file
 //$mail->addAttachment('images/phpmailer_mini.png');

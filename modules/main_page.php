@@ -11,8 +11,8 @@
     <div class="page-content__right--nav hidden-xs">
       <a class="active switch-page" goto="about">about</a>
       <a goto="portfolio" class="switch-page">portfolio</a>
-      <a goto="resume" class="switch-page">Lý lịch</a>
-      <a goto="contact" class="switch-page">Liên hệ</a>
+      <a goto="resume" class="switch-page">Resume</a>
+      <a goto="contact" class="switch-page">Contact</a>
     </div>
     <nav class="nav-mobile visible-xs">
       <div class="nav-mobile__icon col-xs-6">
@@ -23,8 +23,8 @@
       <div class="page-content__right--nav col-xs-12">
         <a class="active switch-page" goto="about">about</a>
         <a goto="portfolio" class="switch-page">portfolio</a>
-        <a goto="resume" class="switch-page">Lý lịch</a>
-        <a goto="contact" class="switch-page">Liên hệ</a>
+        <a goto="resume" class="switch-page">Resume</a>
+        <a goto="contact" class="switch-page">Contact</a>
       </div>
     </nav>
     <div class="page-content__right--content">
