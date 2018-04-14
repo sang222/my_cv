@@ -19,8 +19,6 @@ class Portfolio extends React.Component {
     this.open_Popup()
   }
 
-
-
   LoadMore = () => {
     this.setState({
       limit_item: this.state.limit_item + 6
@@ -35,12 +33,9 @@ class Portfolio extends React.Component {
       });
     }
 
-    // mixer would really be part of the component (this.mixer)
-    console.log(this.state.json,items)
     this.setState({
       json: items
     })
-    console.log(this.state.json,items)
   }
 
   RenderItem() {
@@ -51,7 +46,7 @@ class Portfolio extends React.Component {
             <img alt="" src={item.image} />
             <div className="item_content--box">
               <h5>{item.title}</h5>
-              <a className="open_popup" onClick={this.openPopup(item.id)} popup={item.id}>Click to view detail</a>
+              <a className="open_popup" onClick={this.openPopup(item.id)} popup={item.id}>Bấm để xem chi tiết</a>
             </div>
           </div>
         </div>
@@ -92,7 +87,7 @@ class Portfolio extends React.Component {
           <div className="row">
             <div className="col-md-12 text-center filter--nav">
               <nav className="nav-filter">
-                <span type="button" className={this.isActive('')} onClick={this.applyFilter.bind(this, '')}>All</span>
+                <span type="button" className={this.isActive('')} onClick={this.applyFilter.bind(this, '')}>Tất cả</span>
                 <span type="button" className={this.isActive('website')} onClick={this.applyFilter.bind(this, 'website')}>Website</span>
                 <span type="button" className={this.isActive('banner')} onClick={this.applyFilter.bind(this, 'banner')}>Banner</span>
                 <span type="button" className={this.isActive('emailing')} onClick={this.applyFilter.bind(this, 'emailing')}>Emailing</span>
@@ -102,10 +97,10 @@ class Portfolio extends React.Component {
           <div className="row filter--content" id="portfolio_item">
   						{this.RenderItem()}
           </div>
-          {this.state.json.length >= 6 && this.state.limit_item < 18 ?
+          {this.state.json.length >= 6 && this.state.limit_item < (this.state.json.length - 1) ?
             <div className="row row-loadmore">
               <div className="col-xs-12 text-center">
-                  <a className="btn" onClick={this.LoadMore}>Load more</a>
+                  <a className="btn" onClick={this.LoadMore}>Xem thêm</a>
               </div>
             </div>
           : ''}

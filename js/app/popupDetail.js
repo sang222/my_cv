@@ -60,8 +60,8 @@ class PopupDetail extends Component {
           }
         </Swiper>
         <div className="caption">
-          <p>Project name: {sliderItem.title}</p>
-          <p>Website: <a href={sliderItem.url} target="_blank">{sliderItem.content}</a> </p>
+          <p>Tên dự án: {sliderItem.title}</p>
+          <p>Trang chủ: <a href={sliderItem.url} target="_blank">{sliderItem.content}</a> </p>
         </div>
       </div>
     );

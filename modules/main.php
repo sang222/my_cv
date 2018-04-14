@@ -1,9 +1,46 @@
 <section class="main-page">
   <nav class="nav-main">
-      <a class="about switch-page" goto="about">about</a>
-      <a class="portfolio switch-page" goto="portfolio">portfolio</a>
-      <a class="strength switch-page" goto="resume">Resume</a>
-      <a class="contact switch-page" goto="contact">Contact</a>
+      <a class="about switch-page" goto="about">
+        <span>G</span>
+        <span>i</span>
+        <span>ớ</span>
+        <span>i</span>
+        <span>&nbsp;</span>
+        <span>T</span>
+        <span>h</span>
+        <span>i</span>
+        <span>ệ</span>
+        <span>u</span>
+      </a>
+      <a class="portfolio switch-page" goto="portfolio">
+        <span>P</span>
+        <span>o</span>
+        <span>r</span>
+        <span>t</span>
+        <span>f</span>
+        <span>o</span>
+        <span>l</span>
+        <span>i</span>
+        <span>o</span>
+      </a>
+      <a class="strength switch-page" goto="resume">
+        <span>L</span>
+        <span>ý</span>
+        <span>&nbsp;</span>
+        <span>l</span>
+        <span>ị</span>
+        <span>c</span>
+        <span>h</span>
+      </a>
+      <a class="contact switch-page" goto="contact">
+        <span>L</span>
+        <span>i</span>
+        <span>ê</span>
+        <span>n</span>
+        <span>&nbsp;</span>
+        <span>h</span>
+        <span>ệ</span>
+      </a>
   </nav>
   <div class="main-page__content">
     <div class="circle test">

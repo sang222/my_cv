@@ -10,6 +10,7 @@ SE.form = (function() {
 	}
 
 	function submitClick(form) {
+		
 		$('#submit').on('click', function() {
 			if(form.valid() == true) {
 				form.submit()
@@ -17,6 +18,7 @@ SE.form = (function() {
 		        $('input,textarea').val("");
 		    }).modal('show');
 			}
+
 			else {
 				//alert('error')
 			}
@@ -28,8 +30,10 @@ SE.form = (function() {
 		$(id).validate({
 			rule: {
 				name: "required",
-	      email: "required",
-				message : "required"
+	      email: {
+		      required: true,
+		      email: true
+		    }
 			},
 			highlight: function (element, errorClass) {
         $(element).closest('.form-group').addClass('has-error');
@@ -37,6 +41,13 @@ SE.form = (function() {
 	    unhighlight: function (element, errorClass) {
 	        $(element).closest('.form-group').removeClass('has-error');
 	    },
+			messages: {
+		    name: "Vui lòng nhập đầy đủ họ tên.",
+		    email: {
+		      required: "Tôi cần địa chỉ email của bạn để liên lạc lại.",
+		      email: "Địa chỉ email của bạn cần đúng định dạng: example@gmail.com."
+		    }
+		  },
 			// Make sure the form is submitted to the destination defined
 	    // in the "action" attribute of the form when valid
 	    submitHandler: function(form) {
