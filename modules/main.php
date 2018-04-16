@@ -46,7 +46,10 @@
     <div class="circle test">
       <img src="images/avatar.jpg" alt="" />
     </div>
-    <div class="name">đặng<br/> quang sang</h1>
+    <div class="name">
+      <h2>đặng quang sang</h2>
+      <p>Front-End Developer</p>
+    </h1>
   </div>
 </section>
 <!-- Modal -->
