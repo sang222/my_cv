@@ -5,7 +5,6 @@ import '../sass/all.scss'
 import '../vendor/bootstrap/js/bootstrap.min.js'
 import '../js/lib/jquery.easing.min.js'
 import '../js/lib/TweenMax.min.js'
-var _ = require('lodash');
 import 'jquery-mousewheel'
 import '../js/lib/jquery.mCustomScrollbar.min.js'
 import '../js/lib/jquery.mCustomScrollbar.concat.min.js'
@@ -23,6 +22,6 @@ SE.form.init()
 SE.home.init()
 SE.page.init()
 
-//test load image{
-$(document).ready(function (){
-});
+$(document).ready(function() {
+
+})

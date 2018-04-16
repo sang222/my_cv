@@ -41,8 +41,8 @@ class Portfolio extends React.Component {
   RenderItem() {
     return this.state.json.slice(0,this.state.limit_item).map((item) => {
       return(
-        <div className="mix col-md-4 col-sm-4 col-xs-6 filter--content__item" data-ref="item" key={item.id}>
-          <div className="item_content">
+        <div className="col-md-4 col-sm-4 col-xs-6 filter--content__item" key={item.id}>
+          <div className="item_content" tabindex="1">
             <img alt="" src={item.image} />
             <div className="item_content--box">
               <h5>{item.title}</h5>
@@ -97,7 +97,7 @@ class Portfolio extends React.Component {
           <div className="row filter--content" id="portfolio_item">
   						{this.RenderItem()}
           </div>
-          {this.state.json.length >= 6 && this.state.limit_item < (this.state.json.length - 1) ?
+          {this.state.json.length >= 6 && this.state.limit_item < (this.state.json.length + 1) ?
             <div className="row row-loadmore">
               <div className="col-xs-12 text-center">
                   <a className="btn" onClick={this.LoadMore}>Xem thêm</a>

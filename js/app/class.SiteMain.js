@@ -25,7 +25,7 @@ SE.SiteMain = (function() {
 			});
 			scroll.push(scrollbar);
 		});
-}
+	}
 
 	function open_Popup() {
 	$('.open_popup').on('click', function() {

@@ -1,3 +1,4 @@
+@import '../vendor/bootstrap/css/bootstrap.min.css';
 @import 'variables';
 @import 'flex';
 @import "bootstrap/breakpoints";
@@ -20,3 +21,5 @@
 @import "page/strength";
 @import "page/portfolio";
 @import "responsive";
+@import 'desktop';
+@import 'mobile';

@@ -74,12 +74,13 @@
         &:after {
           content: '';
           position: absolute;
-          width: 50%;
+          width: 0;
+          @include animate(.5s);
           left: 0;
           right: 0;
           margin: auto;
           background: orange;
-          height: 0;
+          height: 2px;
           bottom: -5px;
         }
 
@@ -92,8 +93,7 @@
         }
 
         &:hover:after {
-          height: 2px;
-          background: #ccc;
+          width: 100%;
         }
 
       }

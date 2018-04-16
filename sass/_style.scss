@@ -1,7 +1,7 @@
 body {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100vh;
   overflow-x: hidden;
 
   .btn {
@@ -46,32 +46,45 @@ body {
     }
   }
 
+  &.wrapper {
+
+    .main-page {
+      display: none;
+    }
+
+    .page-content {
+      height: 100vh;
+      overflow: hidden;
+    }
+
+  }
+
   &.wrapper.active {
 
     &-about {
       .page-content__right--nav a[goto="about"]:after {
-        height: 2px;
+        width: 100%;
       }
 
     }
 
     &-contact {
       .page-content__right--nav a[goto="contact"]:after {
-        height: 2px;
+        width: 100%;
       }
 
     }
 
     &-portfolio {
       .page-content__right--nav a[goto="portfolio"]:after {
-        height: 2px;
+        width: 100%;
       }
 
     }
 
     &-resume {
       .page-content__right--nav a[goto="resume"]:after {
-        height: 2px;
+        width: 100%;
       }
 
     }

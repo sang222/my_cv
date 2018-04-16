@@ -1,4 +1,4 @@
-import validate from 'jquery-validation'
+
 SE.form = (function() {
 	//PARAMATER
 
@@ -10,7 +10,7 @@ SE.form = (function() {
 	}
 
 	function submitClick(form) {
-		
+
 		$('#submit').on('click', function() {
 			if(form.valid() == true) {
 				form.submit()

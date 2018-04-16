@@ -41,7 +41,7 @@
             </div>
           </div>
           <div class="coding_bar">
-            <h5>JQuery</h5>
+            <h5>Javascript</h5>
             <div class='progress-bar-holder'>
               <div class='progress-bar-blue' process="85"></div>
             </div>

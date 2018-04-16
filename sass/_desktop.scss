@@ -1,0 +1,16 @@
+.Desktop {
+
+  .section-portfolio.section-content .filter--content__item .item_content:hover {
+    &:after {
+      opacity: 0.7;
+    }
+
+    img {
+      transform: scale(1.3) translate(-40%,-35%);
+    }
+
+    .item_content--box {
+      bottom: 0;
+    }
+  }
+}

@@ -9,9 +9,6 @@
 
     <title>CV - DANG QUANG SANG</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" type="text/css">
-
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
@@ -20,7 +17,7 @@
     <link rel="stylesheet" href="css/all.css">
 
 </head>
-<body class="fullscreen wrapper">
+<body class="fullscreen">
 		<?php
 			include('modules/main.php');
 			include('modules/main_page.php');

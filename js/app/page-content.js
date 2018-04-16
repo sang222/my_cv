@@ -1,3 +1,6 @@
+var MobileDetect = require('mobile-detect')
+var md = new MobileDetect(window.navigator.userAgent);
+
 SE.page = (function() {
 	//PARAMATER
   setting = {
@@ -11,6 +14,7 @@ SE.page = (function() {
 	function init(){
     animate_page();
     switch_page();
+    check_device()
 	}
 
 	//FUNCTION
@@ -31,26 +35,35 @@ SE.page = (function() {
     setting.tl.reverse()
   }
 
+	function check_device() {
+		if(md.is(md.phone()) == true) {
+	    $('body').addClass('Mobile')
+	    $('body').removeClass('Desktop')
+	  }
+	  else {
+	    $('body').removeClass('Mobile')
+	    $('body').addClass('Desktop')
+	  }
+	}
+
 
 
   function switch_page() {
-    $('.wrapper').on('click', '.switch-page', function() {
+    $('.fullscreen').on('click', '.switch-page', function() {
       //window.location.hash = setting.id
       //alert(location.hash)
       setting.id = $(this).attr('goto')
-      setting.page = $('.wrapper .section-content').map(function(){
+      setting.page = $('.section-content').map(function(){
         return $(this).attr('page');
       }).get()
       //console.log(setting.page, setting.id);
 
-      var check = (_.some(setting.page, function (el) {
-        return _.includes(setting.id, el);
-      }))
+      var check = setting.page.find(i => i === setting.id);
       //console.log(check);
 
-      if (check == true) {
+      if (check == setting.id) {
         $('body').removeClass()
-        $('body').addClass('active-'+setting.id+' wrapper')
+        $('body').addClass('active-'+setting.id+' wrapper '+ check_device())
         //console.log($('section[page='+ setting.id +']'));
         //$('section.section-content').hide();
         $('section[page='+ setting.id +']').show()

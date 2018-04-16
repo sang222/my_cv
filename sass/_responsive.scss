@@ -10,6 +10,7 @@
 
 }
 
+
 @include breakpoint(xs) {
   .page-content__right--content, .nav-mobile {
     width: 85%;
@@ -52,11 +53,6 @@
         display: table;
         margin: 15px 0;
         color: #fff;
-
-        &:after {
-          width: 100%;
-        }
-
       }
 
     }
@@ -74,10 +70,26 @@
   }
 }
 
+@media screen and (max-width: 440px) and (orientation: portrait) {
+  .popup.filter-content__popup .caption {
+    width: 80%;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+  .popup.filter-content__popup .swiper-container .swiper-slide img {
+    max-height: 73vh;
+  }
+}
+
 @media screen and(max-width: 850px) and (orientation:landscape) {
 
   .page-content__right--content section {
     max-height: 75vh;
+  }
+
+  .popup.filter-content__popup .swiper-container .swiper-slide img {
+    max-height: 73vh;
   }
 
 }

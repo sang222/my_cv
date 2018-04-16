@@ -1,7 +1,5 @@
 import React, {Component} from 'react'
 import Swiper from 'react-id-swiper';
-var ReactDOM = require('react-dom')
-import $ from 'jquery'
 
 
 class PopupDetail extends Component {
