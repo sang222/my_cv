@@ -21,7 +21,3 @@ SE.SiteMain.init()
 SE.form.init()
 SE.home.init()
 SE.page.init()
-
-$(document).ready(function() {
-
-})

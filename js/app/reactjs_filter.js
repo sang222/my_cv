@@ -15,6 +15,7 @@ class Portfolio extends React.Component {
       limit_item: 6,
     };
   }
+
   componentDidUpdate() {
     this.open_Popup()
   }
@@ -36,6 +37,7 @@ class Portfolio extends React.Component {
     this.setState({
       json: items
     })
+    
   }
 
   RenderItem() {
