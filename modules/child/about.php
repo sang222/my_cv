@@ -8,6 +8,7 @@
       Là một người giao tiếp kém nhưng tôi tự tin với khả năng teamwork và chăm chỉ của mình có thể hoàn thành đa số các projects được giao với tinh thần trách nhiệm và deadline đúng hẹn.
       <br/><br/>
       Mục tiêu nghề nghiệp: Trở thành Fullstack Front-end Developper và có tâm với những dự án mình đang đảm nhận.<br/><br/>
-      Sở thích: hiệu ứng của website (<a href="https://www.awwwards.com/", target="_blank">awwwards</a>), xem blog về coder (<a href="https://toidicodedao.com/", target="_blank">toidicodedao</a>), đọc sách, truyện và đi phượt.
+      Sở thích: hiệu ứng của website (<a href="https://www.awwwards.com/", target="_blank">awwwards</a>), xem blog về coder (<a href="https://toidicodedao.com/", target="_blank">toidicodedao</a>), đọc sách, truyện và đi phượt.<br/><br/>
     </p>
+    <a href="./docs/cv.docx" target="_blank" class="btn">Download CV</a>
 </section>
