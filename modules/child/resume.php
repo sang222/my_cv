@@ -12,16 +12,16 @@
           <h4>2014 - 2017</h4>
             <h5>Trường Cao đẳng nghề Kỹ Thuật Công Nghệ TP.HCM</h4>
             <p>Chuyên ngành: Quản trị mạng máy tính
-              <br/>Loại tốt nghiệp: Khá
+              <br/>Tốt nghiệp loại: Khá
             </p>
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 row__education">
           <h3 class="title_small">Kinh nghiệm</h3>
           <div class="row__education--content">
-          <h4>2016 đến hiện tại</h4>
+          <h4>2016 đến nay</h4>
             <h5>Bliss Interactive</h4>
-            <p>Convert PSD sang HTML, CSS, JAVASRIPT và tích hợp với Backend Team, convert banner(PSD) sang HTML5 và cắt emailing. Có thể hoàn thành website từ Front-end đến Backend với Wordpress
+            <p>Convert PSD sang HTML, CSS, JAVASRIPT và tích hợp với Backend Team, convert banner(PSD) sang HTML5 và cắt emailing.
               <br/>Website: <a href="https://blissmaker.studio/" target="_blank">blissmaker.studio</a>
             </p>
           </div>
@@ -37,19 +37,19 @@
           <div class="coding_bar">
             <h5>CSS3</h5>
             <div class='progress-bar-holder'>
-              <div class='progress-bar-blue' process="93"></div>
+              <div class='progress-bar-blue' process="87"></div>
             </div>
           </div>
           <div class="coding_bar">
             <h5>Javascript</h5>
             <div class='progress-bar-holder'>
-              <div class='progress-bar-blue' process="85"></div>
+              <div class='progress-bar-blue' process="70"></div>
             </div>
           </div>
           <div class="coding_bar">
             <h5>Wordpress</h5>
             <div class='progress-bar-holder'>
-              <div class='progress-bar-blue' process="70"></div>
+              <div class='progress-bar-blue' process="59"></div>
             </div>
           </div>
         </div>

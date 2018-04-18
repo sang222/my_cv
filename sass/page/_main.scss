@@ -76,9 +76,11 @@
 
       }
 
+      &.about, &.strength {
+        @include objAbsoluteMiddle();
+      }
+
       &.about {
-        left: 50%;
-        margin-left: -5.3vw;
         top: 3vh;
 
         @for $i from 1 through 9 {
@@ -97,9 +99,8 @@
       }
 
       &.strength {
-        left: 50%;
-        margin-left: -4vw;
-        bottom: 3vh;
+        bottom: -1vh;
+        top: initial;
 
         @for $i from 1 through 7 {
           span:nth-child(#{$i}) {

@@ -76,7 +76,7 @@ SE.page = (function() {
         })
         setting.tl.play();
         if (setting.id == 'resume') {
-          setTimeout(function(){ process_bar() }, 500);
+          setTimeout(function(){ process_bar() }, 800);
         }
 
       }
