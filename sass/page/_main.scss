@@ -81,7 +81,7 @@
       }
 
       &.about {
-        top: 3vh;
+        top: 4vh;
 
         @for $i from 1 through 9 {
           span:nth-child(#{$i}) {

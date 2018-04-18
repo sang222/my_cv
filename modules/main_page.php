@@ -41,5 +41,5 @@
 </div>
 
 <div class="filter-content__popup popup">
-    <div id="popup_content" style="height: 100%"></div>
+    <div id="popup_content" style="height: 100%; overflow: hidden"></div>
 </div>
