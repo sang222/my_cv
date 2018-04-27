@@ -10,5 +10,5 @@
       Mục tiêu nghề nghiệp: Trở thành Fullstack Front-end Developper và có tâm với những dự án mình đang đảm nhận.<br/><br/>
       Sở thích: hiệu ứng của website (<a href="https://www.awwwards.com/", target="_blank">awwwards</a>), xem blog về coder (<a href="https://toidicodedao.com/", target="_blank">toidicodedao</a>), đọc sách, truyện và đi phượt.<br/><br/>
     </p>
-    <a href="./docs/cv.docx" target="_blank" class="btn">Download CV</a>
+    <a href="./docs/CV_DANGQUANGSANG.docx" target="_blank" class="btn">Download CV</a>
 </section>
