@@ -1,7 +1,6 @@
 <section class="section-contact section-content" page="contact">
       <div class="wrapper_title">
         <h2 class="title">Liên hệ</h2>
-        <span>Liên lạc</span>
       </div>
       <div class="row">
         <div class="col-md-6">

@@ -51,7 +51,9 @@ class PopupDetail extends Component {
             sliderItem.slider.map((slider) => {
                 return (
                   <div className="swiper-slide">
-                    <img src={slider.item} />
+                    <a href={sliderItem.url} target="_blank">
+                      <img src={slider.item} />
+                    </a>
                   </div>
                 );
             })
@@ -59,7 +61,6 @@ class PopupDetail extends Component {
         </Swiper>
         <div className="caption">
           <p>Tên dự án: {sliderItem.title}</p>
-          <p>Trang chủ: <a href={sliderItem.url} target="_blank">{sliderItem.content}</a> </p>
         </div>
       </div>
     );

@@ -1,7 +1,6 @@
 <section class="section-strength section-content" page="resume">
       <div class="wrapper_title">
         <h2 class="title">Lý lịch</h2>
-        <span>1 năm kinh nghiệm</span>
       </div>
       <div class="row">
 
