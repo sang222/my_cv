@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-md-6">
           <h2 class="title_sub">Thông tin liên lạc</h2>
-          <span class="address"><i class="fa fa-map-marker" aria-hidden="true"></i> Dĩ An, Bình Dương</span>
+          <span class="address"><i class="fa fa-map-marker" aria-hidden="true"></i> Sơn Trà, Đà Nẵng.</span>
           <span class="mail"><i class="fa fa-envelope-o" aria-hidden="true"></i>quangsang222@gmail.com</span>
           <span class="phone"><i class="fa fa-phone" aria-hidden="true"></i>0967150928</span>
         </div>

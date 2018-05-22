@@ -75,9 +75,8 @@
           content: '';
           position: absolute;
           width: 0;
-          @include animate(.5s);
+          @include animate(.3s);
           left: 0;
-          right: 0;
           margin: auto;
           background: orange;
           height: 2px;
