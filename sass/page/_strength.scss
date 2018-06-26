@@ -32,8 +32,12 @@
         @include FontRegular(13px, 1.4);
       }
 
+      ul li {
+        @include FontRegular(13px, 1.4);
+      }
+
       h5, p {
-        padding-left: 20px;
+        padding-left: 10px;
       }
 
     }

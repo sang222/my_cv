@@ -20,9 +20,14 @@
           <div class="row__education--content">
           <h4>2016 đến nay</h4>
             <h5>Bliss Interactive</h4>
-            <p>Convert PSD sang HTML, CSS, JAVASRIPT và tích hợp với Backend Team, convert banner(PSD) sang HTML5 và cắt emailing.
-              <br/>Website: <a href="https://blissmaker.studio/" target="_blank">blissmaker.studio</a>
-            </p>
+            <ul>
+              <li>Cắt PSD sang HTML</li>
+              <li>Sử dụng bootstrap và sass/less để thực hiện dự án được giao</li>
+              <li>Có kinh nghiệm 6 tháng làm ReactJS</li>
+              <li>Có kinh nghiệm 5 tháng convert HTML sang Wordpress</li>
+              <li>Thành thạo Jquery và Greensock để thực hiện animation.</li>
+            </ul>
+            <p>Website: <a href="https://blissmaker.studio/" target="_blank">blissmaker.studio</a></p>
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 coding">

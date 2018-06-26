@@ -2,11 +2,10 @@
       <div class="wrapper_title">
         <h2 class="title">Giới thiệu</h2>
       </div>
-      <p class="description">Là một người đam mê animation, với những transition của những thẻ div, span,... Đối với tôi, tôi có thể bỏ cả ngày để tìm hiểu tại sao
-      nó có thể chạy như vậy và làm thế nào để nó có thể chạy đẹp hơn, mượt hơn thế nữa.<br/><br/>
-      Ưu điểm: Teamwork tốt và tinh thần làm việc chăm chỉ của mình thì tôi có thể hoàn thành đa số các projects được giao với tinh thần trách nhiệm và deadline đúng hẹn.
+      <p class="description">Sau khi tốt nghiệp Cao đẳng nghề Kỹ Thuật Công Nghệ TP.HCM, tôi đã có quãng thời gian 2 năm ở Bliss Interactive với công việc chủ yếu là convert PSD sang HTML, nghiên cứu và sử dụng những công nghệ mới như ReactJS,
+        Webpack, … và sử dụng Wordpress cho một số dự án mà không cần phối hợp với team Backend.
       <br/><br/>
-      Mục tiêu nghề nghiệp: Trở thành Fullstack Front-end Developper và có tâm với những dự án mình đang đảm nhận.<br/><br/>
+      Mục tiêu: trở thành Fullstack Frontend Developer và mong muốn được làm việc trong môi trường có nhiều thử thách.<br/><br/>
       Sở thích: hiệu ứng của website (<a href="https://www.awwwards.com/", target="_blank">awwwards</a>), xem blog về coder (<a href="https://toidicodedao.com/", target="_blank">toidicodedao</a>), đọc sách, truyện và đi phượt.<br/><br/>
     </p>
     <a href="./docs/CV_DANGQUANGSANG.docx" target="_blank" class="btn">Download CV</a>
